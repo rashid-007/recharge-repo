@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mysql-configmap
+data:
+  MYSQL_HOST: mysql-service
+  MYSQL_PORT: "3306"
+  APP_PORT: "5000"
+  APP_DEBUG: "False"
