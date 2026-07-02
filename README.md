@@ -2,7 +2,7 @@
 
 A full stack mobile recharge application built with Python Flask and MySQL, containerized with Docker and deployed on Kubernetes.
 
-## Tech Stack
+###### Tech Stack
 - Python 3.12
 - Flask 3.1.3
 - MySQL 8.0
