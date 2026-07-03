@@ -62,6 +62,21 @@ def init_db():
         )
     ''')
 
+    try:
+        cursor.execute('ALTER TABLE users ADD COLUMN email VARCHAR(100) DEFAULT ""')
+    except:
+        pass
+
+    try:
+        cursor.execute('ALTER TABLE users ADD COLUMN is_active BOOLEAN DEFAULT TRUE')
+    except:
+        pass
+
+    try:
+        cursor.execute('ALTER TABLE users MODIFY COLUMN password VARCHAR(255)')
+    except:
+        pass
+
     cursor.execute('SET FOREIGN_KEY_CHECKS=1')
 
     conn.commit()
